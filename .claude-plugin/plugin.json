@@ -1,0 +1,47 @@
+{
+  "name": "cortex-voice",
+  "description": "On-device voice capture MCP for Cortex (macOS). Records a short spoken utterance, transcribes it with Apple's Speech framework on-device, classifies it as a recall query or a memory, and returns the transcript plus a routing hint. Ears-only: it never reads or writes memories — the caller chains to the Cortex MCP recall/remember tools.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Clement Deust",
+    "email": "admin@ai-architect.tools"
+  },
+  "homepage": "https://github.com/cdeust/cortex-voice",
+  "repository": "https://github.com/cdeust/cortex-voice",
+  "license": "MIT",
+  "keywords": [
+    "voice",
+    "speech-to-text",
+    "mcp",
+    "claude-code",
+    "cortex",
+    "apple-speech"
+  ],
+  "userConfig": {
+    "locale": {
+      "type": "string",
+      "title": "Speech locale",
+      "description": "BCP-47 locale for on-device recognition (e.g. en-US, fr-FR). Must be a locale Apple Speech supports on this Mac.",
+      "default": "en-US"
+    },
+    "default_mode": {
+      "type": "string",
+      "title": "Default routing mode",
+      "description": "How listen routes when called without an explicit mode: 'auto' (classify recall vs remember), 'recall', or 'remember'.",
+      "default": "auto"
+    }
+  },
+  "mcpServers": {
+    "cortex-voice": {
+      "command": "python3",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/launcher.py",
+        "cortex_voice"
+      ],
+      "env": {
+        "VOICE_LOCALE": "${user_config.locale}",
+        "VOICE_DEFAULT_MODE": "${user_config.default_mode}"
+      }
+    }
+  }
+}
