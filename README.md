@@ -1,5 +1,7 @@
 # cortex-voice
 
+<p align="center"><img src="assets/banner.svg" alt="cortex-voice — On-device voice capture MCP that transcribes speech locally and hands back a transcript plus a routing hint, ears-only" width="100%"/></p>
+
 On-device **voice capture MCP for Cortex** (macOS). Speak; it records a short
 utterance, transcribes it locally with Apple's Speech framework, decides whether
 you asked a question or stated a fact, and hands back the transcript plus a
