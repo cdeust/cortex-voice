@@ -1,7 +1,7 @@
 {
   "name": "cortex-voice",
   "description": "On-device voice capture MCP for Cortex (macOS). Records a short spoken utterance, transcribes it with Apple's Speech framework on-device, classifies it as a recall query or a memory, and returns the transcript plus a routing hint. Ears-only: it never reads or writes memories — the caller chains to the Cortex MCP recall/remember tools.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Clement Deust",
     "email": "admin@ai-architect.tools"
