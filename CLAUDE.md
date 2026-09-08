@@ -4,9 +4,6 @@ On-device voice capture MCP for Cortex (macOS, Apple Speech). Python.
 
 Global rules are imported, not restated:
 
-@~/.claude/rules/model-behavior.md
-@~/.claude/rules/coding-standards.md
-
 ## Repo-specific constraints
 
 - Ears only: 'listen' transcribes, then hands off to Cortex's recall/remember. It never reads or writes memories itself.
