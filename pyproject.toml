@@ -1,6 +1,6 @@
 [project]
 name = "cortex-voice"
-version = "1.0.0"
+version = "1.0.1"
 description = "On-device voice capture MCP for Cortex (macOS, Apple Speech)."
 readme = "README.md"
 requires-python = ">=3.10"
